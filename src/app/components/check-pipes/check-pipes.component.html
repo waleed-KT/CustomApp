@@ -1,0 +1,43 @@
+<div class="container">
+    <h1>User Details</h1>
+    <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixButton">
+      <input type="text" nz-input placeholder="input search text" [(ngModel)]="nameString" />
+    </nz-input-group>
+    <nz-table #basicTable >
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Department</th>
+          <th>Salary</th>
+          <th>Joining Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users | filter:nameString">
+          <td>{{user.firstName}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.dept}}</td>
+          <td>{{user.salary}}</td>
+          <td>{{user.doj | date:'dd/MM/yyyy'}}</td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </div>
+<div>
+  <button nz-button nzType="primary" (click)="addUser()">Add User</button>
+  <button nz-button nzType="primary" nzDanger (click)="reset()">Reset</button>
+    
+</div>
+
+<br/><br/>
+<p nz-p>
+  When Pipe is Pure : And you push Add User Button it will not show up in List buut if you change the reference of list array by clicking
+  Reset Button then it will show.
+</p>
+<p>
+  When Pipe Is Impure : If you are filtering and pushed the ADD User Button then it will Reflect it in the List at the same time without clicking Reset Button.
+</p>
+<ng-template #suffixButton>
+  <button nz-button nzType="primary" nzSize="large" nzSearch>Search</button>
+</ng-template>

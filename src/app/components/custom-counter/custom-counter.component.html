@@ -1,0 +1,17 @@
+<link   rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+<div class="localDiv">
+  <input
+    nz-input
+    class="custom_input"
+    id="custominput"
+    [(ngModel)]="value"
+    [value]="val"
+    (keydown)="onKeyDown($event)"
+  />
+  <i class="fa fa-arrow-up" (click)="increment()"> </i>
+  <i hidden>icon</i>
+  <i class="fa fa-arrow-down" (click)="decrement()"></i>
+
+   <p>LOCAL VALUE : {{ val }}</p>
+</div>

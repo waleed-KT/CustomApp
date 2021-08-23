@@ -1,0 +1,27 @@
+        <!-- <app-custom-counter id="first-name" type="text" formControlName="firstName"></app-custom-counter> -->
+
+<form nz-form [formGroup]="personalData" (ngSubmit)="submitForm()">
+        <nz-form-item>
+          <nz-form-label [nzSm]="3" [nzXs]="24"  nzFor="firstName">First Name</nz-form-label>
+          <nz-form-control [nzSm]="14" [nzXs]="24" >
+            <input nz-input formControlName="firstName" id="firstName" />
+          </nz-form-control>
+          <p>Pipe Working : {{pipeFirst | customPipe1}}</p>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label [nzSm]="3" [nzXs]="24"  nzFor="lastName">Last Name</nz-form-label>
+          <nz-form-control [nzSm]="14" [nzXs]="24" >
+            <input nz-input formControlName="lastName" id="lastName" />
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <button nz-button class="submitBtn" type="submit">Submit</button>
+        </nz-form-item>
+</form>
+<div>
+{{FormVals}}
+</div>
+
+
+
+

@@ -1,0 +1,33 @@
+.custom_input:hover {
+    border-color: rgb(39, 128, 211);
+  }
+  .custom_input:focus {
+    border-color: rgb(39, 128, 211);
+  }
+  .custom_input:touched {
+    border-color: rgb(39, 128, 211);
+  }
+  .custom_input {
+    width: 200px;
+    height: 30px;
+  }
+  
+  i {
+    position: relative;
+    right: 40px;
+    line-height: 40px;
+    padding-right: 10px;
+    cursor: pointer;
+    z-index: 1;
+    color: #03045fc7;
+  }
+  
+  
+  input {
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    height: 25px;
+    padding: 5px;
+    width: 420px;
+  }
+  
