@@ -26,6 +26,8 @@ import { CheckPipesComponent } from './components/check-pipes/check-pipes.compon
 import { FilterPipe } from './filter.pipe';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzInputModule } from 'ng-zorro-antd/input';
+import { PassGeneratorComponent } from './components/pass-generator/pass-generator.component';
+import { NzSelectModule } from 'ng-zorro-antd/select';
 
 registerLocaleData(en);
 
@@ -41,13 +43,14 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
     Forms1Component,
     CustomPipe1Pipe,
     CheckPipesComponent,
-    FilterPipe
+    FilterPipe,
+    PassGeneratorComponent,
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,NzButtonModule,NzFormModule,NzLayoutModule,NzBreadCrumbModule,NzIconModule,
     AppRoutingModule,DragDropModule,NzTableModule,
     AppRoutingModule,ScrollingModule,NzInputModule,
-    HttpClientModule,
+    HttpClientModule,NzSelectModule,
     BrowserAnimationsModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
