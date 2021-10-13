@@ -28,6 +28,7 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { PassGeneratorComponent } from './components/pass-generator/pass-generator.component';
 import { NzSelectModule } from 'ng-zorro-antd/select';
+import { PicCardComponent } from './components/pic-card/pic-card.component';
 
 registerLocaleData(en);
 
@@ -45,6 +46,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
     CheckPipesComponent,
     FilterPipe,
     PassGeneratorComponent,
+    PicCardComponent,
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,NzButtonModule,NzFormModule,NzLayoutModule,NzBreadCrumbModule,NzIconModule,
